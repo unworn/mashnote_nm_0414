@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="font-kit/futura.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div id="container">
+      <!--
+        <div class="overlay"> <div id="email">john smith</div> <div id="writenote">I hope your day
+        is full of sunshine and rainbows</div> </div> -->
+      <header>
+        <div id="login">        
+        	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  			Sign in
+			</button>
+		</div>
+        
+        <!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<div class="modal-content">
+			
+			  <!-- <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> 
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			  </div>-->
+			  <div class="modal-body">
+			   Please connect with Facebook or Twitter in order to send a note. 
+			   <br> <br>
+			   We just want to make sure you're a real person.
+			  </div>
+			  <div class="modal-footer">
+				<!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+				<button type="button" class="btn btn-primary" id="btnfb">Facebook</button>
+				<button type="button" class="btn btn-primary" id="btntw">Twitter</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+
+        <div id="logo">
+          <h1><a
+            id="brand" href="index.html">mashnote</a></h1>
+        </div>
+        <div id="tagline">
+          <h3>A way to
+            anonymously send positive feedback. <a href="#">MORE</a>
+          </h3>
+          <!-- <sup><a class ="circle" href="#"> ?</a></sup> --> 
+        </div>
+      </header>
+      <div id="wrapper">
+        <div id="note">
+          <div id="emailbox">
+            <!-- <span id="email">to:
+              </span><input id="email" type="email" name="email" placeholder="friend@email.com"> -->
+            <span id="email">to: </span> <input id="email" type="email" onblur="if (this.value=='')
+              this.value=this.defaultValue" onclick="if (this.defaultValue==this.value) this.value=''"
+              value="friend@gmail.com" name="nn">
+          </div>
+          <div id="notebox">
+            <textarea id="writenote" rows="14" placeholder="Here's my note I am sending you, to bring a little sunshine to your day."></textarea>
+            <!-- <textarea id="writenote" rows="18" onblur="if (this.value=='')
+              this.value=this.defaultValue" onclick="if (this.defaultValue==this.value) this.value=''"
+              value="Hi! I want to send your way" name="nn"></textarea> -->
+            <!-- 
+              <section id="editable" contenteditable="true" onblur="if (this.value=='')
+              this.value=this.defaultValue" onclick="if (this.defaultValue==this.value) this.value=''"
+              value="Hi! I want to send your way">Here's my
+              note I am sending you, to bring a little sunshine to your day.</section>
+               -->
+            <!-- 
+              <input id="editable" type="text" contenteditable="true" onblur="if (this.value=='')
+              this.value=this.defaultValue" onclick="if (this.defaultValue==this.value) this.value=''"
+              value="Here's my note I am sending you, to bring a little sunshine to your day.">
+              -->
+            <!-- <textarea id="editable" contenteditable="true" placeholder="Here's my note I am
+              sending you, to bring a little sunshine to your day."></textarea> --> 
+          </div>
+          <div id="sendarea">
+            <div id="checksend">
+              <div class="checkInput" <input type="checkbox" name="" value="1" id="checkInputOne">
+              <label for="checkInputOne"></label> 
+            </div>
+            <span id="checkCopy">Send a copy to myself</span> 
+          </div>
+          <button id="sendnote">Send Note</button>
+        </div>
+      </div>
+    </div>
+    <div id="plane">
+      <a id ="planelink" href="#">Here's my plane over here.</a> <!-- 	<img
+        src="images/plane.svg"/> --> 
+    </div>
+    <div class="push"></div>
+    </div>
+    
+    <footer>
+      <div id="footer-nav">
+        <div id="social">
+          <ul>
+            <li class="fb"><a href="#">Facebook</a></li>
+            <li class="tw"><a
+              href="#">Twitter</a></li>
+          </ul>
+        </div>
+        <div id="footer-links">
+          <ul>
+            <li><a href="about_mashnote.html">About</a></li>
+            <li><a href="about_us.html">Team</a></li>
+            <li><a href="#">privacy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modal.js"></script>
+    
+  </body>
+</html>

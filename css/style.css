@@ -1,0 +1,787 @@
+/* STRUCTURE */
+
+* {
+margin: 0;
+}
+ 
+html, body {
+height: 100%;
+}
+
+/*
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+ */
+
+
+body{
+	position: relative;
+	font-size: 12px;
+/* 
+	margin: 0 0 60px;
+ */
+}
+
+#container{
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -60px;
+}
+
+#wrapper{
+	width: 50%;
+	margin: 50px auto 0 auto;
+}
+
+header{
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+	padding: 20px 0 60px 0;
+/*	background: #EEE;
+
+background: url('../images/linedpaper.png') repeat;
+*/
+}
+
+#logo{
+		width: 50%;
+		margin: 20px auto 0 auto;
+		text-align: center;
+    font-family: FuturaBT-Medium;	
+		text-decoration: none;
+		color: #DAB327;
+		padding: 3px;
+}
+
+#logo a:hover{
+		color: #FF7765;
+}
+
+#tagline{
+		width: 50%;
+		margin: 10px auto 0 auto;
+		text-align: center;
+		font-family: FuturaBT-Medium;
+		font-size: 0.85em;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+}
+
+#login{
+	width: 50%;
+	margin: 0 auto;
+	text-align: right;
+}
+
+#note{
+		width: 100%;
+		margin: 0 auto;
+/* 
+		
+	border: 2px solid #333;
+ */
+}
+
+#notebox{
+	width: 100%;
+	margin-top: 25px;
+}
+
+#emailbox{
+	width: 50%;
+}
+
+#checksend{
+	margin-top: 40px;
+	float: left;
+	font-family: FuturaBT-Medium;
+	text-transform: uppercase;
+	font-size: 0.85em;
+	color: #666;
+	letter-spacing: 0.2em;
+}
+
+.checkInput{
+	width: 20px;
+	height: 20px;
+	border: 2px solid #333;
+	float: left;
+}
+
+.checkInput label{
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+/*
+	top: 0;
+	left: 0;
+*/
+	background: #eee;
+/* 	border:2px solid #333; */
+}
+
+.checkInput label:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 6px;
+	left: 7px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.checkInput label:hover::after {
+	opacity: 0.5;
+}
+
+.checkInput input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}
+
+#checkCopy{
+	float: right;
+	margin: 8px 10px;
+}
+
+button#sendnote{
+	font-family: FuturaBT-Medium;
+	text-transform: uppercase;
+	background-color: #FF7765;
+  text-shadow: none;
+  padding: 18px 34px;
+	letter-spacing: 0.2em;
+	font-size: inherit;
+	line-height: normal;
+}
+
+button#sendnote{
+	background-color: #FFF;
+    color: #FF7765;
+    border: 2px solid #FF7765;
+    box-shadow: none;
+    float: right;
+    cursor: pointer;
+    margin-top: 20px;
+}
+button#sendnote:hover{
+    color: #FFFFFF;
+    background-color: #FF7765;
+    }
+
+footer{
+/* 
+		width: 100%;
+		left: 0;
+		bottom: 0;    
+		position: absolute;
+ */
+		height: 50px;
+		border-top: 2px solid #DDD;
+}
+
+/* 
+footer, .push {
+clear: both;
+}
+ */
+
+.push {
+height: 60px;
+}
+
+#footer-nav{
+		width: 50%;
+		margin: 0 auto;
+}
+
+#footer-links{
+		float: right;
+		text-align: right;
+}
+
+#social{
+		float: left;
+}
+
+#plane{
+	position: absolute;
+	z-index: 50;
+	right: 15%;
+	bottom: 40px;
+	display: none;
+}
+
+#planelink{
+	background: url('../images/plane.svg');
+		background-position: -55px 0px;
+	display: block;
+	width: 55px;
+	height: 72px;
+	background-size: 110px 72px;
+
+	/*
+	
+	transition-duration: 0.5s;	
+	-webkit-transition-duration: 0.5s;
+*/
+	text-indent:-9999px;
+}
+
+#planelink:hover{
+	background-position: 0px 0px;
+
+}
+
+#plane:hover{
+	transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	transform:translate(10px, -15px);
+	-webkit-transform:translate(5px,-20px);
+	cursor: pointer;
+}
+
+#plane{
+/* 	width: 50px; */
+	transition-duration: 1s;	
+	-webkit-transition-duration: 1s;
+}
+
+#editable{
+	min-height: 400px;
+	width: 100%;
+}
+
+/* Other pages */
+
+#contact{
+
+	margin: 0 auto;
+	text-align: center;
+	font-family: Baskerville, Baskerville Old Face, Perpetua, Palatino, Palatino Linotype, Palatino LT STD, Times New Roman, Times, serif;
+	font-size: 1.7em;
+	color: #666;
+	font-style: italic;
+}
+/* TYPE etc */
+
+input#email{
+	margin: 0;
+	font-family: Baskerville, Baskerville Old Face, Perpetua, Palatino, Palatino Linotype, Palatino LT STD, Times New Roman, Times, serif;
+	font-size: 1.7em;
+	color: #666;
+	padding: 15px 0 10px 0px;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	vertical-align: inherit;
+	border-radius: 1px;
+	box-shadow: none;
+	height: auto;
+}
+
+span#email{
+	margin: 0;
+	font-family: Baskerville, Baskerville Old Face, Perpetua, Palatino, Palatino Linotype, Palatino LT STD, Times New Roman, Times, serif;
+	font-size: 1.7em;
+	color: #999;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #333;
+}
+
+textarea#writenote{
+	width: 100%;
+	font-family: Baskerville, Baskerville Old Face, Perpetua, Palatino, Palatino Linotype, Palatino LT STD, Times New Roman, Times, serif;
+	font-size: 1.7em;
+	color: #333;
+	padding: 10px 0;
+	resize: vertical;
+	outline: none;
+	resize: none;
+	border: none;
+	line-height: 1.4em;
+	box-shadow: none;
+}
+
+#about{
+	width: 100%;
+	font-family: Baskerville, Baskerville Old Face, Perpetua, Palatino, Palatino Linotype, Palatino LT STD, Times New Roman, Times, serif;
+	font-size: 1.4em;
+	color: #333;
+	padding: 10px 0;
+	resize: vertical;
+	outline: none;
+	resize: none;
+	border: none;
+	line-height: 1.4em;
+}
+
+h1{
+	font-size: 4.5em;
+}
+
+#login{
+	font-family: FuturaBT-Medium;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	letter-spacing: 0.2em;
+}
+
+#login a{
+	text-decoration: none;
+	color: #333;
+}
+
+#login a:hover{
+	text-decoration: none;
+	color: #FF7765;
+}
+
+#logo h1{
+	margin: 0;
+}
+
+#tagline h3{
+			font-weight:normal;
+			color: #666;
+			font-size: 1.1em;
+			margin-left: 30px;
+}
+
+#tagline h3 a{
+			color: #333;
+			text-decoration: underline;
+/*
+			font-style: normal;
+			font-family: Helvetica, Arial, sans-serif;
+			font-weight: 200;
+			font-size: 1.2em;
+*/
+}
+
+#tagline h3 a:hover{
+			color: #FF7765;
+			font-style: normal;
+}
+
+.circle{
+			color: #FF7765;
+			border: 2px solid #FF7765;
+				border-radius: 50%;
+				-moz-border-radius: 50%; 
+    -webkit-border-radius: 50%;
+			width: 12px;
+			height: 12px;
+/* 			font-size: 0.5em; 
+			line-height: 1em;*/
+			display: inline-block;
+
+}
+
+a#brand{
+		color: #DAB327;
+		text-decoration: none;
+		border-right: solid 3px #333;
+		padding-right: 2px;
+}
+
+#footer-nav ul {
+	text-align: center;
+	padding: 0;
+}
+
+#footer-nav li{
+	font-family: FuturaBT-Medium;
+	text-transform: uppercase;
+	float: left;
+	list-style: none;
+
+	display: inline;
+	font-size: 0.85em;
+	color: #666;
+	letter-spacing: 0.2em;
+}
+
+#social li {
+	padding: 20px 20px 0 0;
+}
+
+#footer-links li {
+	padding: 20px 0 0 20px;
+}
+
+#footer-nav li a{
+	color: #666;
+	text-decoration: none;
+}
+
+#footer-nav li a:hover{
+	color: #DAB327;
+	text-decoration: none;
+}
+
+.fb a{
+	width:20px;
+	height: 20px;
+	background: url('../images/socialogos.png') 0 0;
+	background-size: 40px 40px;
+	font-size: 0;
+	margin: 0;
+	display:block;
+	text-indent:-9999px;
+}
+
+.fb a:hover{
+	background: url('../images/socialogos.png') -20px 0px;
+	background-size: 40px 40px;
+}
+
+.tw a{
+	width:20px;
+	height:18px;
+	background: url('../images/socialogos.png') 0 -21px;
+	background-size: 40px 40px;
+	font-size: 0;
+	margin: 0;
+	display:block;
+	text-indent:-9999px;
+
+}
+
+.tw a:hover{
+	background: url('../images/socialogos.png') -20px -21px;
+	background-size: 40px 40px;
+}
+
+
+@font-face
+{
+	font-family: Archer-Book;
+	src: url('fonts/archer/archer-book-webfont.ttf');
+}
+
+@font-face
+{
+	font-family: Archer-Bold;
+	src: url('fonts/archer/archer-bold-webfont.ttf');
+}
+
+/* MODAL STYLES */
+button.btn{
+	font-size: inherit;
+	background: #FFF;
+	border: none;
+	font-family: FuturaBT-Medium;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	letter-spacing: 0.2em;
+	text-decoration: none;
+	color: #333;
+	text-shadow: none;
+	box-shadow: none;
+	padding: 0;
+	outline: none;
+}
+
+button.btn:hover{
+	text-decoration: none;
+	color: #FF7765;
+	background: #FFF;
+	outline: none;
+}
+
+button.btn:focus{
+	background: none;
+	outline: none;
+}
+
+.modal-backdrop{
+	background: #FFF;
+}
+
+.modal{
+	font-family: FuturaBT-Medium;
+	text-transform: uppercase;
+	border-radius: 1px;
+	text-shadow: none;
+	box-shadow: none;
+	font-size: 1em;
+	color: #666;
+	letter-spacing: 0.2em;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	margin-left: 0;
+	background: transparent;
+	display: none;
+	border: none;
+}
+
+.modal-dialog{
+	width: 40%;
+	margin: 0 auto;
+	background: #FFF;
+	border: solid 2px #333;
+}
+
+/*
+#myModal{
+	width: 50%;
+	margin: 0 auto;
+}
+*/
+
+button.close{
+	font-weight: 100;
+	color: #333;
+	opacity: 1;
+	text-shadow: none;
+	font-size: 4em;
+	line-height: 1em;
+	color:#FF7765;
+	margin: -10px 5px auto auto;
+}
+.modal-content{
+	padding: 30px;
+}
+
+.modal-footer{
+	width: 40%;
+	margin: 20px auto;
+	background: #FFF;
+	border: none;
+}
+
+button#btnfb{
+	width: 50px;
+	height: 50px;
+	background: url('../images/fb_icon.png') no-repeat;
+	background-size: 50px 50px;
+	font-size: 0;
+	margin: 0;
+	display:block;
+	text-indent:-9999px;
+	float: left;
+}
+
+button#btntw{
+	width: 50px;
+	height: 50px;
+	background: url('../images/tw_icon.png') no-repeat;
+	background-size: 50px 50px;
+	font-size: 0;
+	margin: 0;
+	display:block;
+	text-indent:-9999px;
+	float: left;
+	margin-left: 40px;
+}
+
+
+/* RESPONSIVE STYLES */
+
+@media screen and (max-height: 900px) {
+	
+* {
+		margin: 0;
+	}
+	
+	footer{
+		margin-bottom: 0;
+	}
+	
+	#container{
+		margin: 0;
+	}
+	
+	footer{
+		margin-top: 60px;
+	}
+
+}
+
+
+
+@media screen and (max-width: 1440px) {
+	
+	#wrapper, #logo, #login, #tagline, #footer-nav{
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	
+	#wrapper, #logo, #login, #tagline, #footer-nav{
+		width: 80%;
+	}
+		#emailbox{
+		width: 100%;
+	}
+	
+	.modal-dialog{
+	width: 50%;
+}
+
+@media screen and (max-width: 800px) {
+
+	#wrapper, #logo, #login, #tagline, #footer-nav{
+		width: 80%;
+	}
+	#emailbox{
+		width: 100%;
+	}
+	footer{
+		margin-top: 60px;
+	}
+	.modal-dialog{
+	width: 60%;
+}
+
+
+
+@media screen and (max-width: 540px) {
+	
+	.modal-dialog{
+	width: 80%;
+	}
+	
+	textarea#writenote, input#email, span#email{
+		font-size: 1.7em;
+	}
+	
+	#checksend{
+		font-size: 1em;
+		margin-bottom: 20px;
+	}
+	
+	button#sendnote, #login{
+		font-size: 1.1em;
+	}
+	
+		
+	#wrapper{
+		width: 80%;
+	}
+	
+	#logo, #login, #tagline{
+		width: 80%;
+		text-align: left;
+	}
+	
+	#sendarea{
+		width: 80%;
+	}
+	
+	h1{
+		font-size: 5em;
+	}
+	
+	#tagline h3{
+		font-size: 1.2em;
+		margin: 0;
+	}
+	
+	#emailbox{
+		width: 100%;
+	}
+
+	#checkCopy{
+		float: left;
+		margin: 4px 10px;
+	}
+	
+	button#sendnote{
+		float: none;
+		display: block;
+	}
+	
+		
+	#footer-links, #social{
+		text-align: center;
+		width: 100%;
+		margin: 20px auto;
+	}
+	
+	#footer-links li{
+		padding: 0;
+		float: none;
+		display: block;
+		width: 100%;
+		font-size: 1.1em;
+		line-height: 2em;
+		text-align: left;
+	}
+		
+	#social{
+		width: 100px;
+		margin: 0 auto;
+	}
+	
+	#social li{
+		float: left;
+	}
+	
+	.fb a{
+		width: 30px;
+		height: 30px;
+		background-size: 60px 60px;
+	}
+	
+	.fb a:hover{
+		background: url('../images/socialogos.png') -30px 0px;
+		background-size: 60px 60px;
+	}
+	
+	.tw a{
+		width: 30px;
+		height: 30px;
+		background: url('../images/socialogos.png') 0 -30px;
+		background-size: 60px 60px;
+	}
+	
+	.tw a:hover{
+		background: url('../images/socialogos.png') -30px 30px;
+		background-size: 60px 60px;
+	}
+	
+	#social li.tw{
+		padding-right: 0;
+		width: 25%;
+	}
+	
+	#footer-nav{
+		width: 80%;
+		margin: 10px auto;
+	}
+	
+	.modal-footer{
+		width: 80%;
+	}
+
+}
+
+	
+@media screen and (max-width:480px) {
+					
+
+		
+	}
+
+}
+
+
