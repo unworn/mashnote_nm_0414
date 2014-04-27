@@ -508,8 +508,8 @@ a.email{
 }
 
 #about a.aboutus{
-	color: #333;
-	text-decoration: underline;
+	color: #DAB327;
+	text-decoration: none;
 	font-style: italic;
 }
 
