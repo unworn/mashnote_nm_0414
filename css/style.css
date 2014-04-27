@@ -156,6 +156,9 @@ background: url('../images/linedpaper.png') repeat;
 	float: right;
 	margin: 8px 10px;
 }
+button{
+	outline: none;
+}
 
 button#sendnote, button.thanksender, button.viewmashnote{
 	font-family: FuturaBT-Medium;
