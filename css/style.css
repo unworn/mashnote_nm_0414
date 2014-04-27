@@ -246,6 +246,10 @@ button.noteshare:hover{
 	margin: 30px auto;
 }
 
+img#team{
+	margin-bottom: 50px;
+}
+
 footer{
 		height: 50px;
 		border-top: 2px solid #DDD;
