@@ -163,7 +163,7 @@ button#sendnote, button.thanksender, button.viewmashnote{
   text-shadow: none;
   padding: 18px 34px;
 	letter-spacing: 0.2em;
-	font-size: inherit;
+	font-size: 12px;
 	line-height: normal;
 	background-color: #FFF;
   color: #FF7765;
@@ -241,9 +241,19 @@ button.noteshare:hover{
 	margin-top: 0;
 }
 
+#thankshare{
+	text-align: center;
+	margin: 30px auto;
+}
+
 footer{
 		height: 50px;
 		border-top: 2px solid #DDD;
+}
+
+footer#emailfooter{
+	width: 800px;
+	margin: 0 auto;
 }
 
 .push {
@@ -544,6 +554,16 @@ h3#emailnote{
 	margin: 0 25px;
 }
 
+h3#thankyou{
+	font-family: Baskerville, Baskerville Old Face, Perpetua, Palatino, Palatino Linotype, Palatino LT STD, Times New Roman, Times, serif;
+	font-weight: 100;
+	font-style: italic;
+	font-size: 1.3em;
+	line-height: 1.5em;
+	margin: 0 25px;
+	text-align: center;
+}
+
 #footer-nav ul {
 	text-align: center;
 	padding: 0;
@@ -780,6 +800,9 @@ button#btntw{
 		margin: 20px 5px 0 5px;	
 	}
 	
+	footer#emailfooter > #footer-nav{
+		width: auto;
+	}
 }
 
 @media screen and (max-width: 1024px) {
@@ -822,11 +845,15 @@ button#btntw{
 	button.thanksender{
 		margin: 20px 10px 0 10px;	
 	}
-	
-		
+			
 	#emailcontent{
 		width: 90%;
 	}	
+	
+	footer#emailfooter{
+		width: 90%;
+		margin: 0 auto;
+	}
 
 
 }
@@ -872,6 +899,13 @@ button#btntw{
 		width: 90%;
 	}
 	
+	footer#emailfooter{
+		width: 90%;
+		margin: 0 auto;
+	}
+	
+
+	
 	#gotnote{
 		margin: 0;
 		width: auto;
@@ -884,6 +918,16 @@ button#btntw{
 	
 	#sendarea{
 		width: 80%;
+	}
+	
+	#thankshare{
+	text-align: left;
+	margin: 30px 0;
+	}
+	
+	h3#thankyou{
+		text-align: left;
+		margin: 0;
 	}
 	
 	h1{
@@ -924,7 +968,7 @@ button#btntw{
 		float: none;
 		display: block;
 		width: 100%;
-		font-size: 1.1em;
+		font-size: 1em;
 		line-height: 2em;
 		text-align: left;
 	}
