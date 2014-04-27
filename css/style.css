@@ -8,16 +8,6 @@ html, body {
 height: 100%;
 }
 
-/*
-.wrapper {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin: 0 auto -4em;
-}
- */
-
-
 body{
 	position: relative;
 	font-size: 12px;
@@ -35,7 +25,7 @@ body{
 
 #wrapper{
 	width: 50%;
-	margin: 50px auto 0 auto;
+	margin: 40px auto 0 auto;
 }
 
 header{
@@ -55,12 +45,12 @@ background: url('../images/linedpaper.png') repeat;
 		text-align: center;
     font-family: FuturaBT-Medium;	
 		text-decoration: none;
-		color: #DB9B07;
+		color: #DAB327;
 		padding: 3px;
 }
 
 #logo a:hover{
-		color: #EC704F;
+		color: #FF7765;
 }
 
 #tagline{
@@ -80,12 +70,20 @@ background: url('../images/linedpaper.png') repeat;
 }
 
 #note{
-		width: 100%;
+		width: 90%;
 		margin: 0 auto;
-/* 
-		
-	border: 2px solid #333;
- */
+}
+
+#gotnote{
+	width: 90%;
+	margin: 0 auto;
+	padding: 20px;
+	background: #EEE;
+}
+
+#noteshare{
+	margin: 0 auto;
+	text-align: center;
 }
 
 #notebox{
@@ -128,14 +126,14 @@ background: url('../images/linedpaper.png') repeat;
 }
 
 .checkInput label:after {
-	opacity: 0.2;
+	opacity: 0;
 	content: '';
 	position: absolute;
 	width: 9px;
 	height: 5px;
 	background: transparent;
 	top: 6px;
-	left: 5px;
+	left: 7px;
 	border: 3px solid #333;
 	border-top: none;
 	border-right: none;
@@ -159,7 +157,7 @@ background: url('../images/linedpaper.png') repeat;
 	margin: 8px 10px;
 }
 
-button#sendnote{
+button#sendnote, button.thanksender{
 	font-family: FuturaBT-Medium;
 	text-transform: uppercase;
   text-shadow: none;
@@ -167,45 +165,38 @@ button#sendnote{
 	letter-spacing: 0.2em;
 	font-size: inherit;
 	line-height: normal;
+	background-color: #FFF;
+  color: #FF7765;
+  border: 2px solid #FF7765;
+  box-shadow: none;
+  float: right;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
-button#sendnote{
-	background-color: #FFF;
-    color: #EC704F;
-    border: 2px solid #EC704F;
-    box-shadow: none;
-    float: right;
-    cursor: pointer;
-    margin-top: 20px;
-}
-button#sendnote:hover{
+button#sendnote:hover, button.thanksender:hover{
     color: #FFFFFF;
-    background-color: #EC704F;
-    }
+    background-color: #FF7765;
+}
+
+button.thanksender{
+		float: none;
+		margin: 20px 10px 0 10px;
+		height: 60px;
+}
 
 #aboutsocial{
 	width: 120px;
 	margin: 0 auto;
 }
+
 footer{
-/* 
-		width: 100%;
-		left: 0;
-		bottom: 0;    
-		position: absolute;
- */
 		height: 50px;
 		border-top: 2px solid #DDD;
 }
 
-/* 
-footer, .push {
-clear: both;
-}
- */
-
 .push {
-height: 60px;
+	height: 60px;
 }
 
 #footer-nav{
@@ -222,12 +213,53 @@ height: 60px;
 		float: left;
 }
 
+#plane{
+	position: absolute;
+	z-index: 50;
+	right: 15%;
+	bottom: 40px;
+	display: none;
+}
+
+#planelink{
+	background: url('../images/plane.svg');
+		background-position: -55px 0px;
+	display: block;
+	width: 55px;
+	height: 72px;
+	background-size: 110px 72px;
+
+	/*
+	
+	transition-duration: 0.5s;	
+	-webkit-transition-duration: 0.5s;
+*/
+	text-indent:-9999px;
+}
+
+#planelink:hover{
+	background-position: 0px 0px;
+
+}
+
+#plane:hover{
+	transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	transform:translate(10px, -15px);
+	-webkit-transform:translate(5px,-20px);
+	cursor: pointer;
+}
+
+#plane{
+/* 	width: 50px; */
+	transition-duration: 1s;	
+	-webkit-transition-duration: 1s;
+}
+
 #editable{
 	min-height: 400px;
 	width: 100%;
 }
-
-
 
 /* Other pages */
 
@@ -240,11 +272,9 @@ height: 60px;
 	color: #666;
 	font-style: italic;
 }
-
-
 /* TYPE etc */
 
-input#emailinput{
+input#emailinput, span#emailinput{
 	margin: 0;
 	font-family: Baskerville, Baskerville Old Face, Perpetua, Palatino, Palatino Linotype, Palatino LT STD, Times New Roman, Times, serif;
 	font-size: 1.7em;
@@ -268,7 +298,7 @@ span#email{
 	border-bottom: 2px solid #333;
 }
 
-textarea#writenote{
+textarea#writenote, #writenote{
 	width: 100%;
 	font-family: Baskerville, Baskerville Old Face, Perpetua, Palatino, Palatino Linotype, Palatino LT STD, Times New Roman, Times, serif;
 	font-size: 1.7em;
@@ -292,8 +322,7 @@ textarea#writenote{
 	outline: none;
 	resize: none;
 	border: none;
-	line-height: 1.4em;
-	text-align: left;
+	line-height: 1.5em;
 }
 
 h1{
@@ -325,6 +354,7 @@ h2:after{
 
 }
 
+
 #login{
 	font-family: FuturaBT-Medium;
 	text-transform: uppercase;
@@ -339,7 +369,7 @@ h2:after{
 
 #login a:hover{
 	text-decoration: none;
-	color: #EC704F;
+	color: #FF7765;
 }
 
 #logo h1{
@@ -350,11 +380,13 @@ h2:after{
 			font-weight:normal;
 			color: #666;
 			font-size: 1.1em;
-			margin-left: 30px;
+			line-height: 1.7em;
+			margin-top: 20px;
 }
 
 #tagline h3 a{
 			color: #333;
+			background: #FFF;
 			text-decoration: underline;
 /*
 			font-style: normal;
@@ -365,7 +397,8 @@ h2:after{
 }
 
 #tagline h3 a:hover{
-			color: #EC704F;
+			color: #FF7765;
+			text-decoration: underline;
 			font-style: normal;
 }
 
@@ -384,7 +417,7 @@ h2:after{
 }
 
 a#brand{
-		color: #DB9B07;
+		color: #DAB327;
 		text-decoration: none;
 		border-right: solid 3px #333;
 		padding-right: 2px;
@@ -393,7 +426,7 @@ a#brand{
 a.email{
 	font-family: FuturaBT-Medium;
 	text-transform: uppercase;
-	color: #EC704F;
+	color: #FF7765;
 	font-size: 0.8em;
 	letter-spacing: 0.2em;
 	text-align: center;
@@ -408,7 +441,7 @@ a.email{
 }
 
 #about a.aboutus:hover{
-	color: #EC704F;
+	color: #FF7765;
 }
 
 #about li{
@@ -459,6 +492,11 @@ a.email{
 	letter-spacing: 0.2em;
 }
 
+img.fb{
+	width: 20px;
+	height: 20px;
+}
+
 #social li {
 	padding: 20px 20px 0 0;
 }
@@ -473,7 +511,7 @@ a.email{
 }
 
 #footer-nav li a:hover{
-	color: #DB9B07;
+	color: #DAB327;
 	text-decoration: none;
 }
 
@@ -542,7 +580,7 @@ button.btn{
 
 button.btn:hover{
 	text-decoration: none;
-	color: #EC704F;
+	color: #FF7765;
 	background: #FFF;
 	outline: none;
 }
@@ -575,7 +613,7 @@ button.btn:focus{
 }
 
 .modal-dialog{
-	width: 30%;
+	width: 40%;
 	margin: 0 auto;
 	background: #FFF;
 	border: solid 2px #333;
@@ -595,7 +633,7 @@ button.close{
 	text-shadow: none;
 	font-size: 4em;
 	line-height: 1em;
-	color:#EC704F;
+	color:#FF7765;
 	margin: -10px 5px auto auto;
 }
 .modal-content{
@@ -603,7 +641,7 @@ button.close{
 }
 
 .modal-footer{
-	width: 150px;
+	width: 40%;
 	margin: 20px auto;
 	background: #FFF;
 	border: none;
@@ -622,10 +660,10 @@ button#btnfb{
 }
 
 button#btntw{
-	width: 52px;
-	height: 42px;
+	width: 50px;
+	height: 50px;
 	background: url('../images/tw_icon.png') no-repeat;
-	background-size: 52px 42px;
+	background-size: 50px 50px;
 	font-size: 0;
 	margin: 0;
 	display:block;
@@ -657,13 +695,22 @@ button#btntw{
 
 }
 
-
-
 @media screen and (max-width: 1440px) {
 	
 	#wrapper, #logo, #login, #tagline, #footer-nav{
+		width: 60%;
+	}
+}
+
+@media screen and(min-width: 1024px) and (max-width: 1440px){
+	#wrapper, #logo, #login, #tagline, #footer-nav{
 		width: 70%;
 	}
+	
+	button.thanksender{
+		margin: 20px 5px 0 5px;	
+	}
+	
 }
 
 @media screen and (max-width: 1024px) {
@@ -677,6 +724,11 @@ button#btntw{
 	
 	.modal-dialog{
 	width: 50%;
+	}
+	
+	button.thanksender{
+		margin: 20px 5px 0 5px;	
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -692,6 +744,11 @@ button#btntw{
 	}
 	.modal-dialog{
 	width: 60%;
+	}
+	
+	button.thanksender{
+		margin: 20px 10px 0 10px;	
+	}
 }
 
 
@@ -702,7 +759,7 @@ button#btntw{
 	width: 80%;
 	}
 	
-	textarea#writenote, input#emailinput, span#email{
+	textarea#writenote, input#emailinput, span#email, span#emailinput, #writenote{
 		font-size: 1.7em;
 	}
 	
@@ -714,9 +771,24 @@ button#btntw{
 	button#sendnote, #login{
 		font-size: 1.1em;
 	}
+	
+	button.thanksender{
+		text-align: left;
+	}
+	
+	#noteshare{
+		text-align: left;
+	}
 		
 	#wrapper{
 		width: 80%;
+	}
+	
+	#note{
+		width: 100%;
+	}
+	
+	#gotnote{
 	}
 	
 	#logo, #login, #tagline{
@@ -734,10 +806,9 @@ button#btntw{
 	
 	#tagline h3{
 		font-size: 1.2em;
-		margin: 20px auto auto auto;
-		line-height: 1.7em;
+		margin-top: 20px;
 	}
-	
+
 	#emailbox{
 		width: 100%;
 	}
@@ -810,6 +881,11 @@ button#btntw{
 		width: 80%;
 		margin: 10px auto;
 	}
+	
+	.modal-footer{
+		width: 80%;
+	}
+
 }
 
 	
