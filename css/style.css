@@ -388,6 +388,10 @@ textarea#writenote, #writenote{
 	color:#FF7765;
 }
 
+p#charcount{
+	color: #c0c0c0;
+}
+
 #about{
 	width: 100%;
 	font-family: Baskerville, Baskerville Old Face, Perpetua, Palatino, Palatino Linotype, Palatino LT STD, Times New Roman, Times, serif;
@@ -429,7 +433,6 @@ h2:after{
 	padding: 0 5px;
 
 }
-
 
 #login{
 	font-family: FuturaBT-Medium;

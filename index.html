@@ -5,6 +5,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Mashnote - send a positive note</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>  
   </head>
   
   <body>
@@ -66,8 +68,8 @@
 					</div> <!-- closing emailbox -->
                    
 					<div id="notebox">
-            <textarea id="writenote" rows="14" placeholder="I hope this note brings with it a little light, a whiff of the ocean, a promise of warmth. It can't be easy to shed the funk from this endless winter but let's try. Let's think of the beach, sunshine, warm water that awaits you at the end of these crazy weeks at work. You deserve so much more and I am so sure it will come, so soon. Hang in there!"></textarea>
-            
+            <textarea id="writenote" rows="14"  maxlength="500" placeholder="I hope this note brings with it a little light, a whiff of the ocean, a promise of warmth. It can't be easy to shed the funk from this endless winter but let's try. Let's think of the beach, sunshine, warm water that awaits you at the end of these crazy weeks at work. You deserve so much more and I am so sure it will come, so soon. Hang in there!"></textarea>
+            <p id="charcount"></p>
 					</div> <!-- closing notebox -->
           
 					<div id="sendarea">

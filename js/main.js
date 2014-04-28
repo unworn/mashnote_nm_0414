@@ -1,3 +1,4 @@
+/*
 var editable = document.getElementById('editable');
 
 addEvent(editable, 'blur', function () {
@@ -18,3 +19,16 @@ addEvent(document.getElementById('clear'), 'click', function () {
 if (localStorage.getItem('contenteditable')) {
   editable.innerHTML = localStorage.getItem('contenteditable');
 }
+*/
+
+$(document).ready(function() {
+    var text_max = 499;
+    $('#charcount').html(text_max + '');
+
+    $('#writenote').keyup(function() {
+        var text_length = $('#writenote').val().length;
+        var text_remaining = text_max - text_length;
+
+        $('#charcount').html(text_remaining + '');
+    });
+});
