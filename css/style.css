@@ -378,7 +378,9 @@ textarea#writenote, #writenote{
 	border: none;
 	line-height: 1.4em;
 	box-shadow: none;
+	min-height: 300px;
 }
+
 
 #writenote{
 	padding: 0;
